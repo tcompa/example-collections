@@ -1,0 +1,10 @@
+{
+  "job": "s5",
+  "environment": "fractal-system",
+  "command": "delete",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/s5.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/s5.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/s5.log",
+  "handle": "151789",
+  "finished": true
+}

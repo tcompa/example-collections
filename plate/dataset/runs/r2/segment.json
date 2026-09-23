@@ -1,0 +1,57 @@
+{
+  "run": "r2",
+  "step": "segment",
+  "jobs": [
+    {
+      "job": "j14",
+      "step": "segment",
+      "primary": "0_corrected-j2",
+      "task": {
+        "package": "example-tasks",
+        "name": "segment_nuclei",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "threshold": 0.3,
+        "label_name": "nuclei_{image}"
+      },
+      "inputs": {
+        "image": "0_corrected-j2",
+        "container": "well_A1"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:56Z",
+      "finished": "2026-09-22T11:57:56Z",
+      "created": [
+        "nuclei_0_corrected-j14"
+      ],
+      "kept": []
+    },
+    {
+      "job": "j15",
+      "step": "segment",
+      "primary": "1_corrected-j3",
+      "task": {
+        "package": "example-tasks",
+        "name": "segment_nuclei",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "threshold": 0.3,
+        "label_name": "nuclei_{image}"
+      },
+      "inputs": {
+        "image": "1_corrected-j3",
+        "container": "well_A1"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:56Z",
+      "finished": "2026-09-22T11:57:57Z",
+      "created": [
+        "nuclei_1_corrected-j15"
+      ],
+      "kept": []
+    }
+  ],
+  "reused": []
+}

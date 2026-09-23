@@ -1,0 +1,95 @@
+{
+  "run": "r1",
+  "step": "correct",
+  "jobs": [
+    {
+      "job": "j2",
+      "step": "correct",
+      "primary": "img_A1_0",
+      "task": {
+        "package": "example-tasks",
+        "name": "illumination_correction",
+        "version": "1.0.0"
+      },
+      "parameters": {},
+      "inputs": {
+        "image": "img_A1_0",
+        "container": "well_A1"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:53Z",
+      "finished": "2026-09-22T11:57:53Z",
+      "created": [
+        "0_corrected-j2"
+      ],
+      "kept": []
+    },
+    {
+      "job": "j4",
+      "step": "correct",
+      "primary": "img_A2_0",
+      "task": {
+        "package": "example-tasks",
+        "name": "illumination_correction",
+        "version": "1.0.0"
+      },
+      "parameters": {},
+      "inputs": {
+        "image": "img_A2_0",
+        "container": "well_A2"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:53Z",
+      "finished": "2026-09-22T11:57:53Z",
+      "created": [
+        "0_corrected-j4"
+      ],
+      "kept": []
+    },
+    {
+      "job": "j3",
+      "step": "correct",
+      "primary": "img_A1_1",
+      "task": {
+        "package": "example-tasks",
+        "name": "illumination_correction",
+        "version": "1.0.0"
+      },
+      "parameters": {},
+      "inputs": {
+        "image": "img_A1_1",
+        "container": "well_A1"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:54Z",
+      "finished": "2026-09-22T11:57:54Z",
+      "created": [
+        "1_corrected-j3"
+      ],
+      "kept": []
+    },
+    {
+      "job": "j5",
+      "step": "correct",
+      "primary": "img_A2_1",
+      "task": {
+        "package": "example-tasks",
+        "name": "illumination_correction",
+        "version": "1.0.0"
+      },
+      "parameters": {},
+      "inputs": {
+        "image": "img_A2_1",
+        "container": "well_A2"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:54Z",
+      "finished": "2026-09-22T11:57:54Z",
+      "created": [
+        "1_corrected-j5"
+      ],
+      "kept": []
+    }
+  ],
+  "reused": []
+}

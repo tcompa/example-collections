@@ -1,0 +1,25 @@
+{
+  "job": "s1",
+  "status": "succeeded",
+  "report": {
+    "job": "s1",
+    "status": "succeeded",
+    "created": [],
+    "kept": []
+  },
+  "checks": [],
+  "documents": {
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/dataset.json": {
+      "ome": {
+        "version": "0.x",
+        "type": "collection",
+        "name": "multiplex-2026-09",
+        "id": "dataset",
+        "nodes": []
+      }
+    }
+  },
+  "started": "2026-09-22T12:18:47Z",
+  "finished": "2026-09-22T12:18:47Z",
+  "output": ""
+}

@@ -1,0 +1,103 @@
+{
+  "ome": {
+    "version": "0.x",
+    "type": "collection",
+    "name": "A2",
+    "id": "well_A2",
+    "attributes": {
+      "well": {
+        "column": {
+          "id": "2"
+        },
+        "row": {
+          "id": "A"
+        }
+      },
+      "fractal:provenance": {
+        "run": "r1",
+        "job": "j1",
+        "step": "convert",
+        "task": {
+          "package": "example-tasks",
+          "name": "convert",
+          "version": "1.0.0"
+        },
+        "sources": []
+      }
+    },
+    "nodes": [
+      {
+        "type": "multiscale",
+        "name": "0",
+        "id": "img_A2_0",
+        "path": {
+          "type": "zarr",
+          "path": "./0"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "1",
+        "id": "img_A2_1",
+        "path": {
+          "type": "zarr",
+          "path": "./1"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "0_corrected",
+        "id": "0_corrected-j4",
+        "path": {
+          "type": "zarr",
+          "path": "./0_corrected-j4"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "1_corrected",
+        "id": "1_corrected-j5",
+        "path": {
+          "type": "zarr",
+          "path": "./1_corrected-j5"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "nuclei_0_corrected",
+        "id": "nuclei_0_corrected-j8",
+        "path": {
+          "type": "zarr",
+          "path": "./nuclei_0_corrected-j8"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "nuclei_1_corrected",
+        "id": "nuclei_1_corrected-j9",
+        "path": {
+          "type": "zarr",
+          "path": "./nuclei_1_corrected-j9"
+        }
+      },
+      {
+        "type": "fractal:table",
+        "name": "measurements_0_corrected",
+        "id": "measurements_0_corrected-j12",
+        "path": {
+          "type": "zarr",
+          "path": "./measurements_0_corrected-j12"
+        }
+      },
+      {
+        "type": "fractal:table",
+        "name": "measurements_1_corrected",
+        "id": "measurements_1_corrected-j13",
+        "path": {
+          "type": "zarr",
+          "path": "./measurements_1_corrected-j13"
+        }
+      }
+    ]
+  }
+}

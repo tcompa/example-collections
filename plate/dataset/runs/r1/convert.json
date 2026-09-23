@@ -1,0 +1,36 @@
+{
+  "run": "r1",
+  "step": "convert",
+  "jobs": [
+    {
+      "job": "j1",
+      "step": "convert",
+      "primary": "dataset",
+      "task": {
+        "package": "example-tasks",
+        "name": "convert",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/raw"
+      },
+      "inputs": {
+        "dataset": "dataset"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:53Z",
+      "finished": "2026-09-22T11:57:53Z",
+      "created": [
+        "plate",
+        "well_A1",
+        "img_A1_0",
+        "img_A1_1",
+        "well_A2",
+        "img_A2_0",
+        "img_A2_1"
+      ],
+      "kept": []
+    }
+  ],
+  "reused": []
+}

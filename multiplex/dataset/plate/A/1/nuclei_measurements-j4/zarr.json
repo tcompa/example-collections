@@ -1,0 +1,36 @@
+{
+  "attributes": {
+    "ome": {
+      "version": "0.x",
+      "type": "fractal:table",
+      "name": "nuclei_measurements",
+      "id": "nuclei_measurements-j4",
+      "attributes": {
+        "fractal:table": {
+          "type": "measurement"
+        },
+        "fractal:provenance": {
+          "run": "r1",
+          "job": "j4",
+          "step": "measure",
+          "task": {
+            "package": "example-tasks",
+            "name": "measure_objects",
+            "version": "1.0.0"
+          },
+          "sources": [
+            {
+              "id": "1_registered-j2"
+            },
+            {
+              "id": "nuclei-j3"
+            }
+          ]
+        }
+      },
+      "nodes": []
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

@@ -1,0 +1,10 @@
+{
+  "job": "j13",
+  "environment": "example-tasks-1.0.0",
+  "command": "measure-objects",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j13.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j13.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j13.log",
+  "handle": "151724",
+  "finished": true
+}

@@ -1,0 +1,119 @@
+{
+  "run": "r1",
+  "step": "measure",
+  "jobs": [
+    {
+      "job": "j10",
+      "step": "measure",
+      "primary": "0_corrected-j2",
+      "task": {
+        "package": "example-tasks",
+        "name": "measure_objects",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "table_name": "measurements_{image}"
+      },
+      "inputs": {
+        "image": "0_corrected-j2",
+        "container": "well_A1",
+        "label": "nuclei_0_corrected-j6",
+        "roi_table": null
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:55Z",
+      "finished": "2026-09-22T11:57:55Z",
+      "created": [
+        "measurements_0_corrected-j10"
+      ],
+      "kept": [],
+      "removed": {
+        "at": "2026-09-22T11:57:57Z",
+        "by": "sync"
+      }
+    },
+    {
+      "job": "j12",
+      "step": "measure",
+      "primary": "0_corrected-j4",
+      "task": {
+        "package": "example-tasks",
+        "name": "measure_objects",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "table_name": "measurements_{image}"
+      },
+      "inputs": {
+        "image": "0_corrected-j4",
+        "container": "well_A2",
+        "label": "nuclei_0_corrected-j8",
+        "roi_table": null
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:55Z",
+      "finished": "2026-09-22T11:57:55Z",
+      "created": [
+        "measurements_0_corrected-j12"
+      ],
+      "kept": []
+    },
+    {
+      "job": "j11",
+      "step": "measure",
+      "primary": "1_corrected-j3",
+      "task": {
+        "package": "example-tasks",
+        "name": "measure_objects",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "table_name": "measurements_{image}"
+      },
+      "inputs": {
+        "image": "1_corrected-j3",
+        "container": "well_A1",
+        "label": "nuclei_1_corrected-j7",
+        "roi_table": null
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:55Z",
+      "finished": "2026-09-22T11:57:55Z",
+      "created": [
+        "measurements_1_corrected-j11"
+      ],
+      "kept": [],
+      "removed": {
+        "at": "2026-09-22T11:57:57Z",
+        "by": "sync"
+      }
+    },
+    {
+      "job": "j13",
+      "step": "measure",
+      "primary": "1_corrected-j5",
+      "task": {
+        "package": "example-tasks",
+        "name": "measure_objects",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "table_name": "measurements_{image}"
+      },
+      "inputs": {
+        "image": "1_corrected-j5",
+        "container": "well_A2",
+        "label": "nuclei_1_corrected-j9",
+        "roi_table": null
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T11:57:55Z",
+      "finished": "2026-09-22T11:57:55Z",
+      "created": [
+        "measurements_1_corrected-j13"
+      ],
+      "kept": []
+    }
+  ],
+  "reused": []
+}

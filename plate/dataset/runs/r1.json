@@ -1,0 +1,129 @@
+{
+  "run": "r1",
+  "dataset": "ds-plate-2026-09",
+  "parent": null,
+  "workflow": {
+    "version": 1,
+    "steps": [
+      {
+        "name": "convert",
+        "task": {
+          "package": "example-tasks",
+          "name": "convert",
+          "version": "1.0.0"
+        },
+        "parameters": {
+          "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/raw"
+        },
+        "inputs": {
+          "dataset": {
+            "root": true
+          }
+        }
+      },
+      {
+        "name": "correct",
+        "task": {
+          "package": "example-tasks",
+          "name": "illumination_correction",
+          "version": "1.0.0"
+        },
+        "parameters": {},
+        "inputs": {
+          "image": {
+            "from": "convert"
+          }
+        }
+      },
+      {
+        "name": "segment",
+        "task": {
+          "package": "example-tasks",
+          "name": "segment_nuclei",
+          "version": "1.0.0"
+        },
+        "parameters": {
+          "threshold": 0.5,
+          "label_name": "nuclei_{image}"
+        },
+        "inputs": {
+          "image": {
+            "from": "correct"
+          }
+        }
+      },
+      {
+        "name": "measure",
+        "task": {
+          "package": "example-tasks",
+          "name": "measure_objects",
+          "version": "1.0.0"
+        },
+        "parameters": {
+          "table_name": "measurements_{image}"
+        },
+        "inputs": {
+          "image": {
+            "from": "correct"
+          },
+          "label": {
+            "from": "segment",
+            "of": "image"
+          }
+        }
+      }
+    ]
+  },
+  "scope": null,
+  "invalidated": [],
+  "status": "succeeded",
+  "started": "2026-09-22T11:57:53Z",
+  "finished": "2026-09-22T11:57:55Z",
+  "failure": null,
+  "steps": [
+    {
+      "step": "convert",
+      "matched": 1,
+      "selected": 1,
+      "covered": 0,
+      "reused": 0,
+      "executed": 1,
+      "succeeded": 1,
+      "failed": 0,
+      "lost": 0
+    },
+    {
+      "step": "correct",
+      "matched": 4,
+      "selected": 4,
+      "covered": 0,
+      "reused": 0,
+      "executed": 4,
+      "succeeded": 4,
+      "failed": 0,
+      "lost": 0
+    },
+    {
+      "step": "segment",
+      "matched": 4,
+      "selected": 4,
+      "covered": 0,
+      "reused": 0,
+      "executed": 4,
+      "succeeded": 4,
+      "failed": 0,
+      "lost": 0
+    },
+    {
+      "step": "measure",
+      "matched": 4,
+      "selected": 4,
+      "covered": 0,
+      "reused": 0,
+      "executed": 4,
+      "succeeded": 4,
+      "failed": 0,
+      "lost": 0
+    }
+  ]
+}

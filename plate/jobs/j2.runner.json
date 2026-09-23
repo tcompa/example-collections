@@ -1,0 +1,10 @@
+{
+  "job": "j2",
+  "environment": "example-tasks-1.0.0",
+  "command": "illumination-correction",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j2.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j2.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j2.log",
+  "handle": "151604",
+  "finished": true
+}

@@ -1,0 +1,57 @@
+{
+  "attributes": {
+    "ome": {
+      "version": "0.x",
+      "type": "multiscale",
+      "name": "0",
+      "id": "img_A1_0",
+      "attributes": {
+        "field": {
+          "id": 0
+        },
+        "coordinateSystems": [
+          {
+            "id": "physical",
+            "axes": [
+              {
+                "name": "y",
+                "type": "space"
+              },
+              {
+                "name": "x",
+                "type": "space"
+              }
+            ]
+          }
+        ],
+        "fractal:provenance": {
+          "run": "r1",
+          "job": "j1",
+          "step": "convert",
+          "task": {
+            "package": "example-tasks",
+            "name": "convert",
+            "version": "1.0.0"
+          },
+          "sources": []
+        }
+      },
+      "nodes": [
+        {
+          "type": "singlescale",
+          "name": "s0",
+          "id": "s0-img_A1_0",
+          "attributes": {
+            "coordinateTransformations": []
+          },
+          "path": {
+            "type": "zarr",
+            "path": "./s0"
+          }
+        }
+      ]
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

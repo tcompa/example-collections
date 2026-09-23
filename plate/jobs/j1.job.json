@@ -1,0 +1,34 @@
+{
+  "job": "j1",
+  "run": "r1",
+  "step": "convert",
+  "task": {
+    "package": "example-tasks",
+    "name": "convert",
+    "version": "1.0.0",
+    "command": "convert-acquisition"
+  },
+  "environment": "example-tasks-1.0.0",
+  "parameters": {
+    "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/raw"
+  },
+  "inputs": {
+    "dataset": {
+      "id": "dataset",
+      "type": "collection",
+      "name": "plate-2026-09",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/dataset.json",
+      "writable": true
+    }
+  },
+  "provenance": {
+    "run": "r1",
+    "job": "j1",
+    "step": "convert",
+    "task": {
+      "package": "example-tasks",
+      "name": "convert",
+      "version": "1.0.0"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "job": "j7",
+  "environment": "example-tasks-1.0.0",
+  "command": "segment-nuclei",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j7.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j7.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/j7.log",
+  "handle": "151665",
+  "finished": true
+}

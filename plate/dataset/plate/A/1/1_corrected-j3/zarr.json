@@ -1,0 +1,61 @@
+{
+  "attributes": {
+    "ome": {
+      "version": "0.x",
+      "type": "multiscale",
+      "name": "1_corrected",
+      "id": "1_corrected-j3",
+      "attributes": {
+        "field": {
+          "id": 1
+        },
+        "coordinateSystems": [
+          {
+            "id": "physical",
+            "axes": [
+              {
+                "name": "y",
+                "type": "space"
+              },
+              {
+                "name": "x",
+                "type": "space"
+              }
+            ]
+          }
+        ],
+        "fractal:provenance": {
+          "run": "r1",
+          "job": "j3",
+          "step": "correct",
+          "task": {
+            "package": "example-tasks",
+            "name": "illumination_correction",
+            "version": "1.0.0"
+          },
+          "sources": [
+            {
+              "id": "img_A1_1"
+            }
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "type": "singlescale",
+          "name": "s0",
+          "id": "s0-1_corrected-j3",
+          "attributes": {
+            "coordinateTransformations": []
+          },
+          "path": {
+            "type": "zarr",
+            "path": "./s0"
+          }
+        }
+      ]
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

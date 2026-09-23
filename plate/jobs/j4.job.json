@@ -1,0 +1,39 @@
+{
+  "job": "j4",
+  "run": "r1",
+  "step": "correct",
+  "task": {
+    "package": "example-tasks",
+    "name": "illumination_correction",
+    "version": "1.0.0",
+    "command": "illumination-correction"
+  },
+  "environment": "example-tasks-1.0.0",
+  "parameters": {},
+  "inputs": {
+    "image": {
+      "id": "img_A2_0",
+      "type": "multiscale",
+      "name": "0",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/0/zarr.json",
+      "writable": false
+    },
+    "container": {
+      "id": "well_A2",
+      "type": "collection",
+      "name": "A2",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/well.json",
+      "writable": true
+    }
+  },
+  "provenance": {
+    "run": "r1",
+    "job": "j4",
+    "step": "correct",
+    "task": {
+      "package": "example-tasks",
+      "name": "illumination_correction",
+      "version": "1.0.0"
+    }
+  }
+}

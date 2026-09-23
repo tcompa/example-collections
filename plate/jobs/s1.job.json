@@ -1,0 +1,27 @@
+{
+  "job": "s1",
+  "run": "system",
+  "step": "create_root",
+  "task": {
+    "package": "fractal-system",
+    "name": "create_root",
+    "version": "0.1.0",
+    "command": "create_root"
+  },
+  "environment": "fractal-system",
+  "parameters": {
+    "root": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/dataset.json",
+    "name": "plate-2026-09"
+  },
+  "inputs": {},
+  "provenance": {
+    "run": "system",
+    "job": "s1",
+    "step": "create_root",
+    "task": {
+      "package": "fractal-system",
+      "name": "create_root",
+      "version": "0.1.0"
+    }
+  }
+}

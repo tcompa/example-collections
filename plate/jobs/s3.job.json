@@ -1,0 +1,37 @@
+{
+  "job": "s3",
+  "run": "system",
+  "step": "delete",
+  "task": {
+    "package": "fractal-system",
+    "name": "delete",
+    "version": "0.1.0",
+    "command": "delete"
+  },
+  "environment": "fractal-system",
+  "parameters": {
+    "nodes": [
+      {
+        "id": "nuclei_0_corrected-j6",
+        "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/1/nuclei_0_corrected-j6/zarr.json",
+        "parent_document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/1/well.json"
+      },
+      {
+        "id": "nuclei_1_corrected-j7",
+        "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/1/nuclei_1_corrected-j7/zarr.json",
+        "parent_document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/1/well.json"
+      }
+    ]
+  },
+  "inputs": {},
+  "provenance": {
+    "run": "system",
+    "job": "s3",
+    "step": "delete",
+    "task": {
+      "package": "fractal-system",
+      "name": "delete",
+      "version": "0.1.0"
+    }
+  }
+}

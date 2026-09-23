@@ -1,0 +1,45 @@
+{
+  "ome": {
+    "version": "0.x",
+    "type": "collection",
+    "name": "plate",
+    "id": "plate",
+    "attributes": {
+      "plate": {
+        "acquisitions": [],
+        "columns": [
+          {
+            "id": "1"
+          }
+        ],
+        "rows": [
+          {
+            "id": "A"
+          }
+        ]
+      },
+      "fractal:provenance": {
+        "run": "r1",
+        "job": "j1",
+        "step": "convert",
+        "task": {
+          "package": "example-tasks",
+          "name": "convert",
+          "version": "1.0.0"
+        },
+        "sources": []
+      }
+    },
+    "nodes": [
+      {
+        "type": "collection",
+        "name": "A1",
+        "id": "well_A1",
+        "path": {
+          "type": "json",
+          "path": "./A/1/well.json"
+        }
+      }
+    ]
+  }
+}

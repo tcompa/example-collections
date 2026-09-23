@@ -1,0 +1,10 @@
+{
+  "job": "s1",
+  "environment": "fractal-system",
+  "command": "create_root",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/jobs/s1.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/jobs/s1.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/jobs/s1.log",
+  "handle": "151945",
+  "finished": true
+}

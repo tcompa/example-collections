@@ -1,0 +1,9 @@
+{
+  "plate": {"id": "plate", "name": "plate", "rows": ["A"], "columns": ["1"]},
+  "wells": [
+    {"id": "well_A1", "name": "A1", "row": "A", "column": "1", "images": [
+      {"id": "img_A1_c0", "name": "0", "attributes": {"field": {"id": 0}, "acquisition": {"id": "0"}}},
+      {"id": "img_A1_c1", "name": "1", "attributes": {"field": {"id": 0}, "acquisition": {"id": "1"}}}
+    ]}
+  ]
+}

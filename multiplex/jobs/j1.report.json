@@ -1,0 +1,11 @@
+{
+  "job": "j1",
+  "status": "succeeded",
+  "created": [
+    "plate",
+    "well_A1",
+    "img_A1_c0",
+    "img_A1_c1"
+  ],
+  "kept": []
+}

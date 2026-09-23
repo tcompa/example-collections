@@ -1,0 +1,10 @@
+{
+  "job": "j1",
+  "environment": "example-tasks-1.0.0",
+  "command": "convert-acquisition",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/jobs/j1.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/jobs/j1.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/jobs/j1.log",
+  "handle": "151948",
+  "finished": true
+}

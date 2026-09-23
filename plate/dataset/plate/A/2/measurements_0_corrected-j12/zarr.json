@@ -1,0 +1,36 @@
+{
+  "attributes": {
+    "ome": {
+      "version": "0.x",
+      "type": "fractal:table",
+      "name": "measurements_0_corrected",
+      "id": "measurements_0_corrected-j12",
+      "attributes": {
+        "fractal:table": {
+          "type": "measurement"
+        },
+        "fractal:provenance": {
+          "run": "r1",
+          "job": "j12",
+          "step": "measure",
+          "task": {
+            "package": "example-tasks",
+            "name": "measure_objects",
+            "version": "1.0.0"
+          },
+          "sources": [
+            {
+              "id": "0_corrected-j4"
+            },
+            {
+              "id": "nuclei_0_corrected-j8"
+            }
+          ]
+        }
+      },
+      "nodes": []
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

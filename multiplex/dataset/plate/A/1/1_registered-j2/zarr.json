@@ -1,0 +1,67 @@
+{
+  "attributes": {
+    "ome": {
+      "version": "0.x",
+      "type": "multiscale",
+      "name": "1_registered",
+      "id": "1_registered-j2",
+      "attributes": {
+        "field": {
+          "id": 0
+        },
+        "acquisition": {
+          "id": "1"
+        },
+        "coordinateSystems": [
+          {
+            "id": "physical",
+            "axes": [
+              {
+                "name": "y",
+                "type": "space"
+              },
+              {
+                "name": "x",
+                "type": "space"
+              }
+            ]
+          }
+        ],
+        "fractal:provenance": {
+          "run": "r1",
+          "job": "j2",
+          "step": "register",
+          "task": {
+            "package": "example-tasks",
+            "name": "register",
+            "version": "1.0.0"
+          },
+          "sources": [
+            {
+              "id": "img_A1_c1"
+            },
+            {
+              "id": "img_A1_c0"
+            }
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "type": "singlescale",
+          "name": "s0",
+          "id": "s0-1_registered-j2",
+          "attributes": {
+            "coordinateTransformations": []
+          },
+          "path": {
+            "type": "zarr",
+            "path": "./s0"
+          }
+        }
+      ]
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

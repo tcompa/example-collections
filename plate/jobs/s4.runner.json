@@ -1,0 +1,10 @@
+{
+  "job": "s4",
+  "environment": "fractal-system",
+  "command": "record",
+  "job_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/s4.job.json",
+  "result_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/s4.result.json",
+  "log_path": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/jobs/s4.log",
+  "handle": "151758",
+  "finished": true
+}

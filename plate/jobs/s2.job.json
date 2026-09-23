@@ -1,0 +1,509 @@
+{
+  "job": "s2",
+  "run": "system",
+  "step": "record",
+  "task": {
+    "package": "fractal-system",
+    "name": "record",
+    "version": "0.1.0",
+    "command": "record"
+  },
+  "environment": "fractal-system",
+  "parameters": {
+    "runs": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/runs/",
+    "header": {
+      "run": "r1",
+      "dataset": "ds-plate-2026-09",
+      "parent": null,
+      "workflow": {
+        "version": 1,
+        "steps": [
+          {
+            "name": "convert",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/raw"
+            },
+            "inputs": {
+              "dataset": {
+                "root": true
+              }
+            }
+          },
+          {
+            "name": "correct",
+            "task": {
+              "package": "example-tasks",
+              "name": "illumination_correction",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": {
+                "from": "convert"
+              }
+            }
+          },
+          {
+            "name": "segment",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": {
+                "from": "correct"
+              }
+            }
+          },
+          {
+            "name": "measure",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": {
+                "from": "correct"
+              },
+              "label": {
+                "from": "segment",
+                "of": "image"
+              }
+            }
+          }
+        ]
+      },
+      "scope": null,
+      "invalidated": [],
+      "status": "succeeded",
+      "started": "2026-09-22T12:17:54Z",
+      "finished": "2026-09-22T12:17:57Z",
+      "failure": null,
+      "steps": [
+        {
+          "step": "convert",
+          "matched": 1,
+          "selected": 1,
+          "covered": 0,
+          "reused": 0,
+          "executed": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "correct",
+          "matched": 4,
+          "selected": 4,
+          "covered": 0,
+          "reused": 0,
+          "executed": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "segment",
+          "matched": 4,
+          "selected": 4,
+          "covered": 0,
+          "reused": 0,
+          "executed": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "measure",
+          "matched": 4,
+          "selected": 4,
+          "covered": 0,
+          "reused": 0,
+          "executed": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "lost": 0
+        }
+      ]
+    },
+    "steps": {
+      "r1/convert": {
+        "run": "r1",
+        "step": "convert",
+        "jobs": [
+          {
+            "job": "j1",
+            "step": "convert",
+            "primary": "dataset",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/raw"
+            },
+            "inputs": {
+              "dataset": "dataset"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:54Z",
+            "finished": "2026-09-22T12:17:55Z",
+            "created": [
+              "plate",
+              "well_A1",
+              "img_A1_0",
+              "img_A1_1",
+              "well_A2",
+              "img_A2_0",
+              "img_A2_1"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r1/correct": {
+        "run": "r1",
+        "step": "correct",
+        "jobs": [
+          {
+            "job": "j2",
+            "step": "correct",
+            "primary": "img_A1_0",
+            "task": {
+              "package": "example-tasks",
+              "name": "illumination_correction",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": "img_A1_0",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:55Z",
+            "finished": "2026-09-22T12:17:55Z",
+            "created": [
+              "0_corrected-j2"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j4",
+            "step": "correct",
+            "primary": "img_A2_0",
+            "task": {
+              "package": "example-tasks",
+              "name": "illumination_correction",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": "img_A2_0",
+              "container": "well_A2"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:55Z",
+            "finished": "2026-09-22T12:17:55Z",
+            "created": [
+              "0_corrected-j4"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j3",
+            "step": "correct",
+            "primary": "img_A1_1",
+            "task": {
+              "package": "example-tasks",
+              "name": "illumination_correction",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": "img_A1_1",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:55Z",
+            "finished": "2026-09-22T12:17:55Z",
+            "created": [
+              "1_corrected-j3"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j5",
+            "step": "correct",
+            "primary": "img_A2_1",
+            "task": {
+              "package": "example-tasks",
+              "name": "illumination_correction",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": "img_A2_1",
+              "container": "well_A2"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:55Z",
+            "finished": "2026-09-22T12:17:55Z",
+            "created": [
+              "1_corrected-j5"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r1/segment": {
+        "run": "r1",
+        "step": "segment",
+        "jobs": [
+          {
+            "job": "j6",
+            "step": "segment",
+            "primary": "0_corrected-j2",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j2",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_0_corrected-j6"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j8",
+            "step": "segment",
+            "primary": "0_corrected-j4",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j4",
+              "container": "well_A2"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_0_corrected-j8"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j7",
+            "step": "segment",
+            "primary": "1_corrected-j3",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j3",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_1_corrected-j7"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j9",
+            "step": "segment",
+            "primary": "1_corrected-j5",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j5",
+              "container": "well_A2"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_1_corrected-j9"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r1/measure": {
+        "run": "r1",
+        "step": "measure",
+        "jobs": [
+          {
+            "job": "j10",
+            "step": "measure",
+            "primary": "0_corrected-j2",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j2",
+              "container": "well_A1",
+              "label": "nuclei_0_corrected-j6",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:57Z",
+            "created": [
+              "measurements_0_corrected-j10"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j12",
+            "step": "measure",
+            "primary": "0_corrected-j4",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j4",
+              "container": "well_A2",
+              "label": "nuclei_0_corrected-j8",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:57Z",
+            "created": [
+              "measurements_0_corrected-j12"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j13",
+            "step": "measure",
+            "primary": "1_corrected-j5",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j5",
+              "container": "well_A2",
+              "label": "nuclei_1_corrected-j9",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:57Z",
+            "finished": "2026-09-22T12:17:57Z",
+            "created": [
+              "measurements_1_corrected-j13"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j11",
+            "step": "measure",
+            "primary": "1_corrected-j3",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j3",
+              "container": "well_A1",
+              "label": "nuclei_1_corrected-j7",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:57Z",
+            "finished": "2026-09-22T12:17:57Z",
+            "created": [
+              "measurements_1_corrected-j11"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      }
+    },
+    "head": {
+      "main": "r1"
+    }
+  },
+  "inputs": {},
+  "provenance": {
+    "run": "system",
+    "job": "s2",
+    "step": "record",
+    "task": {
+      "package": "fractal-system",
+      "name": "record",
+      "version": "0.1.0"
+    }
+  }
+}

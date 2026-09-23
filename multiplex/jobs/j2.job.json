@@ -1,0 +1,48 @@
+{
+  "job": "j2",
+  "run": "r1",
+  "step": "register",
+  "task": {
+    "package": "example-tasks",
+    "name": "register",
+    "version": "1.0.0",
+    "command": "register-to-reference"
+  },
+  "environment": "example-tasks-1.0.0",
+  "parameters": {
+    "method": "phase_correlation"
+  },
+  "inputs": {
+    "moving": {
+      "id": "img_A1_c1",
+      "type": "multiscale",
+      "name": "1",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/1/zarr.json",
+      "writable": false
+    },
+    "container": {
+      "id": "well_A1",
+      "type": "collection",
+      "name": "A1",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/well.json",
+      "writable": true
+    },
+    "reference": {
+      "id": "img_A1_c0",
+      "type": "multiscale",
+      "name": "0",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/0/zarr.json",
+      "writable": false
+    }
+  },
+  "provenance": {
+    "run": "r1",
+    "job": "j2",
+    "step": "register",
+    "task": {
+      "package": "example-tasks",
+      "name": "register",
+      "version": "1.0.0"
+    }
+  }
+}

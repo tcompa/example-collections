@@ -1,0 +1,276 @@
+{
+  "job": "s7",
+  "run": "system",
+  "step": "record",
+  "task": {
+    "package": "fractal-system",
+    "name": "record",
+    "version": "0.1.0",
+    "command": "record"
+  },
+  "environment": "fractal-system",
+  "parameters": {
+    "runs": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/runs/",
+    "header": {
+      "run": "r2",
+      "dataset": "ds-plate-2026-09",
+      "parent": "r1",
+      "workflow": {
+        "version": 2,
+        "steps": [
+          {
+            "name": "convert",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/raw"
+            },
+            "inputs": {
+              "dataset": {
+                "root": true
+              }
+            }
+          },
+          {
+            "name": "correct",
+            "task": {
+              "package": "example-tasks",
+              "name": "illumination_correction",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": {
+                "from": "convert"
+              }
+            }
+          },
+          {
+            "name": "segment",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.3,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": {
+                "from": "correct"
+              }
+            }
+          },
+          {
+            "name": "measure",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": {
+                "from": "correct"
+              },
+              "label": {
+                "from": "segment",
+                "of": "image"
+              }
+            }
+          }
+        ]
+      },
+      "scope": "well_A1",
+      "invalidated": [],
+      "status": "succeeded",
+      "started": "2026-09-22T12:17:57Z",
+      "finished": "2026-09-22T12:17:59Z",
+      "failure": null,
+      "steps": [
+        {
+          "step": "convert",
+          "matched": 1,
+          "selected": 1,
+          "covered": 1,
+          "reused": 0,
+          "executed": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "correct",
+          "matched": 4,
+          "selected": 2,
+          "covered": 2,
+          "reused": 0,
+          "executed": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "segment",
+          "matched": 4,
+          "selected": 2,
+          "covered": 0,
+          "reused": 0,
+          "executed": 2,
+          "succeeded": 2,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "measure",
+          "matched": 4,
+          "selected": 2,
+          "covered": 0,
+          "reused": 0,
+          "executed": 2,
+          "succeeded": 2,
+          "failed": 0,
+          "lost": 0
+        }
+      ]
+    },
+    "steps": {
+      "r2/segment": {
+        "run": "r2",
+        "step": "segment",
+        "jobs": [
+          {
+            "job": "j14",
+            "step": "segment",
+            "primary": "0_corrected-j2",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.3,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j2",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:58Z",
+            "finished": "2026-09-22T12:17:58Z",
+            "created": [
+              "nuclei_0_corrected-j14"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j15",
+            "step": "segment",
+            "primary": "1_corrected-j3",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.3,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j3",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:58Z",
+            "finished": "2026-09-22T12:17:58Z",
+            "created": [
+              "nuclei_1_corrected-j15"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r2/measure": {
+        "run": "r2",
+        "step": "measure",
+        "jobs": [
+          {
+            "job": "j16",
+            "step": "measure",
+            "primary": "0_corrected-j2",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j2",
+              "container": "well_A1",
+              "label": "nuclei_0_corrected-j14",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:59Z",
+            "finished": "2026-09-22T12:17:59Z",
+            "created": [
+              "measurements_0_corrected-j16"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j17",
+            "step": "measure",
+            "primary": "1_corrected-j3",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j3",
+              "container": "well_A1",
+              "label": "nuclei_1_corrected-j15",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:59Z",
+            "finished": "2026-09-22T12:17:59Z",
+            "created": [
+              "measurements_1_corrected-j17"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      }
+    },
+    "head": {
+      "main": "r2"
+    }
+  },
+  "inputs": {},
+  "provenance": {
+    "run": "system",
+    "job": "s7",
+    "step": "record",
+    "task": {
+      "package": "fractal-system",
+      "name": "record",
+      "version": "0.1.0"
+    }
+  }
+}

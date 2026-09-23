@@ -1,0 +1,296 @@
+{
+  "job": "s2",
+  "run": "system",
+  "step": "record",
+  "task": {
+    "package": "fractal-system",
+    "name": "record",
+    "version": "0.1.0",
+    "command": "record"
+  },
+  "environment": "fractal-system",
+  "parameters": {
+    "runs": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/runs/",
+    "header": {
+      "run": "r1",
+      "dataset": "ds-multiplex-2026-09",
+      "parent": null,
+      "workflow": {
+        "version": 1,
+        "steps": [
+          {
+            "name": "convert",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/raw"
+            },
+            "inputs": {
+              "dataset": {
+                "root": true
+              }
+            }
+          },
+          {
+            "name": "register",
+            "task": {
+              "package": "example-tasks",
+              "name": "register",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "method": "phase_correlation"
+            },
+            "inputs": {
+              "moving": {
+                "from": "convert",
+                "where": [
+                  {
+                    "attribute": "acquisition.id",
+                    "not_equals": "0"
+                  }
+                ]
+              },
+              "reference": {
+                "from": "convert",
+                "name": "0"
+              }
+            }
+          },
+          {
+            "name": "segment",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5
+            },
+            "inputs": {
+              "image": {
+                "from": "convert",
+                "name": "0"
+              }
+            }
+          },
+          {
+            "name": "measure",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": {
+                "from": "register"
+              },
+              "label": {
+                "from": "segment"
+              }
+            }
+          }
+        ]
+      },
+      "scope": null,
+      "invalidated": [],
+      "status": "succeeded",
+      "started": "2026-09-22T12:18:47Z",
+      "finished": "2026-09-22T12:18:48Z",
+      "failure": null,
+      "steps": [
+        {
+          "step": "convert",
+          "matched": 1,
+          "selected": 1,
+          "covered": 0,
+          "reused": 0,
+          "executed": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "register",
+          "matched": 1,
+          "selected": 1,
+          "covered": 0,
+          "reused": 0,
+          "executed": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "segment",
+          "matched": 1,
+          "selected": 1,
+          "covered": 0,
+          "reused": 0,
+          "executed": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "lost": 0
+        },
+        {
+          "step": "measure",
+          "matched": 1,
+          "selected": 1,
+          "covered": 0,
+          "reused": 0,
+          "executed": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "lost": 0
+        }
+      ]
+    },
+    "steps": {
+      "r1/convert": {
+        "run": "r1",
+        "step": "convert",
+        "jobs": [
+          {
+            "job": "j1",
+            "step": "convert",
+            "primary": "dataset",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "acquisition_dir": "/home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/raw"
+            },
+            "inputs": {
+              "dataset": "dataset"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:18:47Z",
+            "finished": "2026-09-22T12:18:47Z",
+            "created": [
+              "plate",
+              "well_A1",
+              "img_A1_c0",
+              "img_A1_c1"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r1/register": {
+        "run": "r1",
+        "step": "register",
+        "jobs": [
+          {
+            "job": "j2",
+            "step": "register",
+            "primary": "img_A1_c1",
+            "task": {
+              "package": "example-tasks",
+              "name": "register",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "method": "phase_correlation"
+            },
+            "inputs": {
+              "moving": "img_A1_c1",
+              "container": "well_A1",
+              "reference": "img_A1_c0"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:18:47Z",
+            "finished": "2026-09-22T12:18:48Z",
+            "created": [
+              "1_registered-j2"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r1/segment": {
+        "run": "r1",
+        "step": "segment",
+        "jobs": [
+          {
+            "job": "j3",
+            "step": "segment",
+            "primary": "img_A1_c0",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5
+            },
+            "inputs": {
+              "image": "img_A1_c0",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:18:48Z",
+            "finished": "2026-09-22T12:18:48Z",
+            "created": [
+              "nuclei-j3"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      },
+      "r1/measure": {
+        "run": "r1",
+        "step": "measure",
+        "jobs": [
+          {
+            "job": "j4",
+            "step": "measure",
+            "primary": "1_registered-j2",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {},
+            "inputs": {
+              "image": "1_registered-j2",
+              "container": "well_A1",
+              "label": "nuclei-j3",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:18:48Z",
+            "finished": "2026-09-22T12:18:48Z",
+            "created": [
+              "nuclei_measurements-j4"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      }
+    },
+    "head": {
+      "main": "r1"
+    }
+  },
+  "inputs": {},
+  "provenance": {
+    "run": "system",
+    "job": "s2",
+    "step": "record",
+    "task": {
+      "package": "fractal-system",
+      "name": "record",
+      "version": "0.1.0"
+    }
+  }
+}

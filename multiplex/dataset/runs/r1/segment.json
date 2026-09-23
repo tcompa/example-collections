@@ -1,0 +1,31 @@
+{
+  "run": "r1",
+  "step": "segment",
+  "jobs": [
+    {
+      "job": "j3",
+      "step": "segment",
+      "primary": "img_A1_c0",
+      "task": {
+        "package": "example-tasks",
+        "name": "segment_nuclei",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "threshold": 0.5
+      },
+      "inputs": {
+        "image": "img_A1_c0",
+        "container": "well_A1"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T12:11:39Z",
+      "finished": "2026-09-22T12:11:39Z",
+      "created": [
+        "nuclei-j3"
+      ],
+      "kept": []
+    }
+  ],
+  "reused": []
+}

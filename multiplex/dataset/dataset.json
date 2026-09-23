@@ -1,0 +1,19 @@
+{
+  "ome": {
+    "version": "0.x",
+    "type": "collection",
+    "name": "multiplex-2026-09",
+    "id": "dataset",
+    "nodes": [
+      {
+        "type": "collection",
+        "name": "plate",
+        "id": "plate",
+        "path": {
+          "type": "json",
+          "path": "./plate/plate.json"
+        }
+      }
+    ]
+  }
+}

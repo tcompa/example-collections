@@ -1,0 +1,72 @@
+{
+  "attributes": {
+    "ome": {
+      "version": "0.x",
+      "type": "multiscale",
+      "name": "nuclei",
+      "id": "nuclei-j3",
+      "attributes": {
+        "field": {
+          "id": 0
+        },
+        "acquisition": {
+          "id": "0"
+        },
+        "coordinateSystems": [
+          {
+            "id": "physical",
+            "axes": [
+              {
+                "name": "y",
+                "type": "space"
+              },
+              {
+                "name": "x",
+                "type": "space"
+              }
+            ]
+          }
+        ],
+        "labels": {
+          "labelAttributes": [],
+          "source": [
+            {
+              "id": "img_A1_c0"
+            }
+          ]
+        },
+        "fractal:provenance": {
+          "run": "r1",
+          "job": "j3",
+          "step": "segment",
+          "task": {
+            "package": "example-tasks",
+            "name": "segment_nuclei",
+            "version": "1.0.0"
+          },
+          "sources": [
+            {
+              "id": "img_A1_c0"
+            }
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "type": "singlescale",
+          "name": "s0",
+          "id": "s0-nuclei-j3",
+          "attributes": {
+            "coordinateTransformations": []
+          },
+          "path": {
+            "type": "zarr",
+            "path": "./s0"
+          }
+        }
+      ]
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

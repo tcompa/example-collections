@@ -1,0 +1,49 @@
+{
+  "job": "j12",
+  "run": "r1",
+  "step": "measure",
+  "task": {
+    "package": "example-tasks",
+    "name": "measure_objects",
+    "version": "1.0.0",
+    "command": "measure-objects"
+  },
+  "environment": "example-tasks-1.0.0",
+  "parameters": {
+    "table_name": "measurements_{image}"
+  },
+  "inputs": {
+    "image": {
+      "id": "0_corrected-j4",
+      "type": "multiscale",
+      "name": "0_corrected",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/0_corrected-j4/zarr.json",
+      "writable": false
+    },
+    "container": {
+      "id": "well_A2",
+      "type": "collection",
+      "name": "A2",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/well.json",
+      "writable": true
+    },
+    "label": {
+      "id": "nuclei_0_corrected-j8",
+      "type": "multiscale",
+      "name": "nuclei_0_corrected",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/nuclei_0_corrected-j8/zarr.json",
+      "writable": false
+    },
+    "roi_table": null
+  },
+  "provenance": {
+    "run": "r1",
+    "job": "j12",
+    "step": "measure",
+    "task": {
+      "package": "example-tasks",
+      "name": "measure_objects",
+      "version": "1.0.0"
+    }
+  }
+}

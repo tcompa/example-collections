@@ -1,0 +1,76 @@
+{
+  "ome": {
+    "version": "0.x",
+    "type": "collection",
+    "name": "A1",
+    "id": "well_A1",
+    "attributes": {
+      "well": {
+        "column": {
+          "id": "1"
+        },
+        "row": {
+          "id": "A"
+        }
+      },
+      "fractal:provenance": {
+        "run": "r1",
+        "job": "j1",
+        "step": "convert",
+        "task": {
+          "package": "example-tasks",
+          "name": "convert",
+          "version": "1.0.0"
+        },
+        "sources": []
+      }
+    },
+    "nodes": [
+      {
+        "type": "multiscale",
+        "name": "0",
+        "id": "img_A1_c0",
+        "path": {
+          "type": "zarr",
+          "path": "./0"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "1",
+        "id": "img_A1_c1",
+        "path": {
+          "type": "zarr",
+          "path": "./1"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "1_registered",
+        "id": "1_registered-j2",
+        "path": {
+          "type": "zarr",
+          "path": "./1_registered-j2"
+        }
+      },
+      {
+        "type": "multiscale",
+        "name": "nuclei",
+        "id": "nuclei-j3",
+        "path": {
+          "type": "zarr",
+          "path": "./nuclei-j3"
+        }
+      },
+      {
+        "type": "fractal:table",
+        "name": "nuclei_measurements",
+        "id": "nuclei_measurements-j4",
+        "path": {
+          "type": "zarr",
+          "path": "./nuclei_measurements-j4"
+        }
+      }
+    ]
+  }
+}

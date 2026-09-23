@@ -1,0 +1,32 @@
+{
+  "run": "r1",
+  "step": "register",
+  "jobs": [
+    {
+      "job": "j2",
+      "step": "register",
+      "primary": "img_A1_c1",
+      "task": {
+        "package": "example-tasks",
+        "name": "register",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "method": "phase_correlation"
+      },
+      "inputs": {
+        "moving": "img_A1_c1",
+        "container": "well_A1",
+        "reference": "img_A1_c0"
+      },
+      "status": "succeeded",
+      "started": "2026-09-22T12:11:39Z",
+      "finished": "2026-09-22T12:11:39Z",
+      "created": [
+        "1_registered-j2"
+      ],
+      "kept": []
+    }
+  ],
+  "reused": []
+}

@@ -1,0 +1,41 @@
+{
+  "job": "j3",
+  "run": "r1",
+  "step": "segment",
+  "task": {
+    "package": "example-tasks",
+    "name": "segment_nuclei",
+    "version": "1.0.0",
+    "command": "segment-nuclei"
+  },
+  "environment": "example-tasks-1.0.0",
+  "parameters": {
+    "threshold": 0.5
+  },
+  "inputs": {
+    "image": {
+      "id": "img_A1_c0",
+      "type": "multiscale",
+      "name": "0",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/0/zarr.json",
+      "writable": false
+    },
+    "container": {
+      "id": "well_A1",
+      "type": "collection",
+      "name": "A1",
+      "document": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/well.json",
+      "writable": true
+    }
+  },
+  "provenance": {
+    "run": "r1",
+    "job": "j3",
+    "step": "segment",
+    "task": {
+      "package": "example-tasks",
+      "name": "segment_nuclei",
+      "version": "1.0.0"
+    }
+  }
+}

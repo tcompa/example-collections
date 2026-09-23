@@ -1,0 +1,101 @@
+{
+  "job": "s5",
+  "status": "succeeded",
+  "report": {
+    "job": "s5",
+    "status": "succeeded",
+    "created": [],
+    "kept": []
+  },
+  "checks": [],
+  "documents": {
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/1/well.json": {
+      "ome": {
+        "version": "0.x",
+        "type": "collection",
+        "name": "A1",
+        "id": "well_A1",
+        "attributes": {
+          "well": {
+            "column": {
+              "id": "1"
+            },
+            "row": {
+              "id": "A"
+            }
+          },
+          "fractal:provenance": {
+            "run": "r1",
+            "job": "j1",
+            "step": "convert",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "sources": []
+          }
+        },
+        "nodes": [
+          {
+            "type": "multiscale",
+            "name": "0",
+            "id": "img_A1_0",
+            "path": {
+              "type": "zarr",
+              "path": "./0"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "1",
+            "id": "img_A1_1",
+            "path": {
+              "type": "zarr",
+              "path": "./1"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "0_corrected",
+            "id": "0_corrected-j2",
+            "path": {
+              "type": "zarr",
+              "path": "./0_corrected-j2"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "1_corrected",
+            "id": "1_corrected-j3",
+            "path": {
+              "type": "zarr",
+              "path": "./1_corrected-j3"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "nuclei_0_corrected",
+            "id": "nuclei_0_corrected-j14",
+            "path": {
+              "type": "zarr",
+              "path": "./nuclei_0_corrected-j14"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "nuclei_1_corrected",
+            "id": "nuclei_1_corrected-j15",
+            "path": {
+              "type": "zarr",
+              "path": "./nuclei_1_corrected-j15"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "started": "2026-09-22T12:17:58Z",
+  "finished": "2026-09-22T12:17:58Z",
+  "output": ""
+}

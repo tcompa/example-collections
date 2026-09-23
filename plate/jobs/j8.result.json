@@ -1,0 +1,399 @@
+{
+  "job": "j8",
+  "status": "succeeded",
+  "report": {
+    "job": "j8",
+    "status": "succeeded",
+    "created": [
+      "nuclei_0_corrected-j8"
+    ],
+    "kept": []
+  },
+  "checks": [],
+  "documents": {
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/well.json": {
+      "ome": {
+        "version": "0.x",
+        "type": "collection",
+        "name": "A2",
+        "id": "well_A2",
+        "attributes": {
+          "well": {
+            "column": {
+              "id": "2"
+            },
+            "row": {
+              "id": "A"
+            }
+          },
+          "fractal:provenance": {
+            "run": "r1",
+            "job": "j1",
+            "step": "convert",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "sources": []
+          }
+        },
+        "nodes": [
+          {
+            "type": "multiscale",
+            "name": "0",
+            "id": "img_A2_0",
+            "path": {
+              "type": "zarr",
+              "path": "./0"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "1",
+            "id": "img_A2_1",
+            "path": {
+              "type": "zarr",
+              "path": "./1"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "0_corrected",
+            "id": "0_corrected-j4",
+            "path": {
+              "type": "zarr",
+              "path": "./0_corrected-j4"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "1_corrected",
+            "id": "1_corrected-j5",
+            "path": {
+              "type": "zarr",
+              "path": "./1_corrected-j5"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "nuclei_0_corrected",
+            "id": "nuclei_0_corrected-j8",
+            "path": {
+              "type": "zarr",
+              "path": "./nuclei_0_corrected-j8"
+            }
+          }
+        ]
+      }
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/0/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "0",
+          "id": "img_A2_0",
+          "attributes": {
+            "field": {
+              "id": 0
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j1",
+              "step": "convert",
+              "task": {
+                "package": "example-tasks",
+                "name": "convert",
+                "version": "1.0.0"
+              },
+              "sources": []
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-img_A2_0",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/1/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "1",
+          "id": "img_A2_1",
+          "attributes": {
+            "field": {
+              "id": 1
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j1",
+              "step": "convert",
+              "task": {
+                "package": "example-tasks",
+                "name": "convert",
+                "version": "1.0.0"
+              },
+              "sources": []
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-img_A2_1",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/0_corrected-j4/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "0_corrected",
+          "id": "0_corrected-j4",
+          "attributes": {
+            "field": {
+              "id": 0
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j4",
+              "step": "correct",
+              "task": {
+                "package": "example-tasks",
+                "name": "illumination_correction",
+                "version": "1.0.0"
+              },
+              "sources": [
+                {
+                  "id": "img_A2_0"
+                }
+              ]
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-0_corrected-j4",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/1_corrected-j5/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "1_corrected",
+          "id": "1_corrected-j5",
+          "attributes": {
+            "field": {
+              "id": 1
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j5",
+              "step": "correct",
+              "task": {
+                "package": "example-tasks",
+                "name": "illumination_correction",
+                "version": "1.0.0"
+              },
+              "sources": [
+                {
+                  "id": "img_A2_1"
+                }
+              ]
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-1_corrected-j5",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/plate/A/2/nuclei_0_corrected-j8/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "nuclei_0_corrected",
+          "id": "nuclei_0_corrected-j8",
+          "attributes": {
+            "field": {
+              "id": 0
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "labels": {
+              "labelAttributes": [],
+              "source": [
+                {
+                  "id": "0_corrected-j4"
+                }
+              ]
+            },
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j8",
+              "step": "segment",
+              "task": {
+                "package": "example-tasks",
+                "name": "segment_nuclei",
+                "version": "1.0.0"
+              },
+              "sources": [
+                {
+                  "id": "0_corrected-j4"
+                }
+              ]
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-nuclei_0_corrected-j8",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    }
+  },
+  "started": "2026-09-22T12:17:56Z",
+  "finished": "2026-09-22T12:17:56Z",
+  "output": "segment-nuclei: 1 image, threshold 0.5, 412 objects\n"
+}

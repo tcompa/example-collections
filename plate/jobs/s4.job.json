@@ -1,0 +1,147 @@
+{
+  "job": "s4",
+  "run": "system",
+  "step": "record",
+  "task": {
+    "package": "fractal-system",
+    "name": "record",
+    "version": "0.1.0",
+    "command": "record"
+  },
+  "environment": "fractal-system",
+  "parameters": {
+    "runs": "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/plate/dataset/runs/",
+    "header": null,
+    "steps": {
+      "r1/segment": {
+        "run": "r1",
+        "step": "segment",
+        "jobs": [
+          {
+            "job": "j6",
+            "step": "segment",
+            "primary": "0_corrected-j2",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j2",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_0_corrected-j6"
+            ],
+            "kept": [],
+            "removed": {
+              "at": "2026-09-22T12:17:57Z",
+              "by": "sync"
+            }
+          },
+          {
+            "job": "j8",
+            "step": "segment",
+            "primary": "0_corrected-j4",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "0_corrected-j4",
+              "container": "well_A2"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_0_corrected-j8"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j7",
+            "step": "segment",
+            "primary": "1_corrected-j3",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j3",
+              "container": "well_A1"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_1_corrected-j7"
+            ],
+            "kept": [],
+            "removed": {
+              "at": "2026-09-22T12:17:57Z",
+              "by": "sync"
+            }
+          },
+          {
+            "job": "j9",
+            "step": "segment",
+            "primary": "1_corrected-j5",
+            "task": {
+              "package": "example-tasks",
+              "name": "segment_nuclei",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "threshold": 0.5,
+              "label_name": "nuclei_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j5",
+              "container": "well_A2"
+            },
+            "status": "succeeded",
+            "started": "2026-09-22T12:17:56Z",
+            "finished": "2026-09-22T12:17:56Z",
+            "created": [
+              "nuclei_1_corrected-j9"
+            ],
+            "kept": []
+          }
+        ],
+        "reused": []
+      }
+    },
+    "head": {
+      "main": "r1"
+    }
+  },
+  "inputs": {},
+  "provenance": {
+    "run": "system",
+    "job": "s4",
+    "step": "record",
+    "task": {
+      "package": "fractal-system",
+      "name": "record",
+      "version": "0.1.0"
+    }
+  }
+}

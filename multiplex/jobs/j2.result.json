@@ -1,0 +1,263 @@
+{
+  "job": "j2",
+  "status": "succeeded",
+  "report": {
+    "job": "j2",
+    "status": "succeeded",
+    "created": [
+      "1_registered-j2"
+    ],
+    "kept": []
+  },
+  "checks": [],
+  "documents": {
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/well.json": {
+      "ome": {
+        "version": "0.x",
+        "type": "collection",
+        "name": "A1",
+        "id": "well_A1",
+        "attributes": {
+          "well": {
+            "column": {
+              "id": "1"
+            },
+            "row": {
+              "id": "A"
+            }
+          },
+          "fractal:provenance": {
+            "run": "r1",
+            "job": "j1",
+            "step": "convert",
+            "task": {
+              "package": "example-tasks",
+              "name": "convert",
+              "version": "1.0.0"
+            },
+            "sources": []
+          }
+        },
+        "nodes": [
+          {
+            "type": "multiscale",
+            "name": "0",
+            "id": "img_A1_c0",
+            "path": {
+              "type": "zarr",
+              "path": "./0"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "1",
+            "id": "img_A1_c1",
+            "path": {
+              "type": "zarr",
+              "path": "./1"
+            }
+          },
+          {
+            "type": "multiscale",
+            "name": "1_registered",
+            "id": "1_registered-j2",
+            "path": {
+              "type": "zarr",
+              "path": "./1_registered-j2"
+            }
+          }
+        ]
+      }
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/0/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "0",
+          "id": "img_A1_c0",
+          "attributes": {
+            "field": {
+              "id": 0
+            },
+            "acquisition": {
+              "id": "0"
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j1",
+              "step": "convert",
+              "task": {
+                "package": "example-tasks",
+                "name": "convert",
+                "version": "1.0.0"
+              },
+              "sources": []
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-img_A1_c0",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/1/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "1",
+          "id": "img_A1_c1",
+          "attributes": {
+            "field": {
+              "id": 0
+            },
+            "acquisition": {
+              "id": "1"
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j1",
+              "step": "convert",
+              "task": {
+                "package": "example-tasks",
+                "name": "convert",
+                "version": "1.0.0"
+              },
+              "sources": []
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-img_A1_c1",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    },
+    "file:///home/tommaso/Fractal/v3/fractal-v3-prototyping/examples/out/multiplex/dataset/plate/A/1/1_registered-j2/zarr.json": {
+      "attributes": {
+        "ome": {
+          "version": "0.x",
+          "type": "multiscale",
+          "name": "1_registered",
+          "id": "1_registered-j2",
+          "attributes": {
+            "field": {
+              "id": 0
+            },
+            "acquisition": {
+              "id": "1"
+            },
+            "coordinateSystems": [
+              {
+                "id": "physical",
+                "axes": [
+                  {
+                    "name": "y",
+                    "type": "space"
+                  },
+                  {
+                    "name": "x",
+                    "type": "space"
+                  }
+                ]
+              }
+            ],
+            "fractal:provenance": {
+              "run": "r1",
+              "job": "j2",
+              "step": "register",
+              "task": {
+                "package": "example-tasks",
+                "name": "register",
+                "version": "1.0.0"
+              },
+              "sources": [
+                {
+                  "id": "img_A1_c1"
+                },
+                {
+                  "id": "img_A1_c0"
+                }
+              ]
+            }
+          },
+          "nodes": [
+            {
+              "type": "singlescale",
+              "name": "s0",
+              "id": "s0-1_registered-j2",
+              "attributes": {
+                "coordinateTransformations": []
+              },
+              "path": {
+                "type": "zarr",
+                "path": "./s0"
+              }
+            }
+          ]
+        }
+      },
+      "zarr_format": 3,
+      "node_type": "group"
+    }
+  },
+  "started": "2026-09-22T12:18:47Z",
+  "finished": "2026-09-22T12:18:48Z",
+  "output": "register-to-reference: img_A1_c1 onto img_A1_c0 -> 1_registered-j2\n"
+}
