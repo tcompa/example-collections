@@ -471,7 +471,7 @@
       "node_type": "group"
     }
   },
-  "started": "2026-09-22T12:17:56Z",
-  "finished": "2026-09-22T12:17:56Z",
+  "started": "2026-09-23T11:05:11Z",
+  "finished": "2026-09-23T11:05:12Z",
   "output": "segment-nuclei: 1 image, threshold 0.5, 412 objects\n"
 }

@@ -21,14 +21,14 @@
         "roi_table": null
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:55Z",
-      "finished": "2026-09-22T11:57:55Z",
+      "started": "2026-09-23T11:05:12Z",
+      "finished": "2026-09-23T11:05:12Z",
       "created": [
         "measurements_0_corrected-j10"
       ],
       "kept": [],
       "removed": {
-        "at": "2026-09-22T11:57:57Z",
+        "at": "2026-09-23T11:05:14Z",
         "by": "sync"
       }
     },
@@ -51,8 +51,8 @@
         "roi_table": null
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:55Z",
-      "finished": "2026-09-22T11:57:55Z",
+      "started": "2026-09-23T11:05:12Z",
+      "finished": "2026-09-23T11:05:12Z",
       "created": [
         "measurements_0_corrected-j12"
       ],
@@ -77,14 +77,14 @@
         "roi_table": null
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:55Z",
-      "finished": "2026-09-22T11:57:55Z",
+      "started": "2026-09-23T11:05:12Z",
+      "finished": "2026-09-23T11:05:12Z",
       "created": [
         "measurements_1_corrected-j11"
       ],
       "kept": [],
       "removed": {
-        "at": "2026-09-22T11:57:57Z",
+        "at": "2026-09-23T11:05:14Z",
         "by": "sync"
       }
     },
@@ -107,8 +107,8 @@
         "roi_table": null
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:55Z",
-      "finished": "2026-09-22T11:57:55Z",
+      "started": "2026-09-23T11:05:12Z",
+      "finished": "2026-09-23T11:05:12Z",
       "created": [
         "measurements_1_corrected-j13"
       ],

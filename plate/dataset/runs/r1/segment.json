@@ -3,31 +3,6 @@
   "step": "segment",
   "jobs": [
     {
-      "job": "j8",
-      "step": "segment",
-      "primary": "0_corrected-j4",
-      "task": {
-        "package": "example-tasks",
-        "name": "segment_nuclei",
-        "version": "1.0.0"
-      },
-      "parameters": {
-        "threshold": 0.5,
-        "label_name": "nuclei_{image}"
-      },
-      "inputs": {
-        "image": "0_corrected-j4",
-        "container": "well_A2"
-      },
-      "status": "succeeded",
-      "started": "2026-09-22T11:57:54Z",
-      "finished": "2026-09-22T11:57:54Z",
-      "created": [
-        "nuclei_0_corrected-j8"
-      ],
-      "kept": []
-    },
-    {
       "job": "j6",
       "step": "segment",
       "primary": "0_corrected-j2",
@@ -45,21 +20,21 @@
         "container": "well_A1"
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:54Z",
-      "finished": "2026-09-22T11:57:54Z",
+      "started": "2026-09-23T11:05:11Z",
+      "finished": "2026-09-23T11:05:11Z",
       "created": [
         "nuclei_0_corrected-j6"
       ],
       "kept": [],
       "removed": {
-        "at": "2026-09-22T11:57:56Z",
+        "at": "2026-09-23T11:05:13Z",
         "by": "sync"
       }
     },
     {
-      "job": "j9",
+      "job": "j8",
       "step": "segment",
-      "primary": "1_corrected-j5",
+      "primary": "0_corrected-j4",
       "task": {
         "package": "example-tasks",
         "name": "segment_nuclei",
@@ -70,14 +45,14 @@
         "label_name": "nuclei_{image}"
       },
       "inputs": {
-        "image": "1_corrected-j5",
+        "image": "0_corrected-j4",
         "container": "well_A2"
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:54Z",
-      "finished": "2026-09-22T11:57:55Z",
+      "started": "2026-09-23T11:05:11Z",
+      "finished": "2026-09-23T11:05:11Z",
       "created": [
-        "nuclei_1_corrected-j9"
+        "nuclei_0_corrected-j8"
       ],
       "kept": []
     },
@@ -99,16 +74,41 @@
         "container": "well_A1"
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:54Z",
-      "finished": "2026-09-22T11:57:55Z",
+      "started": "2026-09-23T11:05:11Z",
+      "finished": "2026-09-23T11:05:12Z",
       "created": [
         "nuclei_1_corrected-j7"
       ],
       "kept": [],
       "removed": {
-        "at": "2026-09-22T11:57:56Z",
+        "at": "2026-09-23T11:05:13Z",
         "by": "sync"
       }
+    },
+    {
+      "job": "j9",
+      "step": "segment",
+      "primary": "1_corrected-j5",
+      "task": {
+        "package": "example-tasks",
+        "name": "segment_nuclei",
+        "version": "1.0.0"
+      },
+      "parameters": {
+        "threshold": 0.5,
+        "label_name": "nuclei_{image}"
+      },
+      "inputs": {
+        "image": "1_corrected-j5",
+        "container": "well_A2"
+      },
+      "status": "succeeded",
+      "started": "2026-09-23T11:05:11Z",
+      "finished": "2026-09-23T11:05:12Z",
+      "created": [
+        "nuclei_1_corrected-j9"
+      ],
+      "kept": []
     }
   ],
   "reused": []

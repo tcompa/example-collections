@@ -516,7 +516,7 @@
       "node_type": "group"
     }
   },
-  "started": "2026-09-22T12:17:56Z",
-  "finished": "2026-09-22T12:17:57Z",
+  "started": "2026-09-23T11:05:12Z",
+  "finished": "2026-09-23T11:05:12Z",
   "output": "measure-objects: nuclei_0_corrected-j8 on 0_corrected-j4 -> measurements_0_corrected-j12\n"
 }

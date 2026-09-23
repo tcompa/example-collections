@@ -99,8 +99,8 @@
       "scope": null,
       "invalidated": [],
       "status": "succeeded",
-      "started": "2026-09-22T12:18:47Z",
-      "finished": "2026-09-22T12:18:48Z",
+      "started": "2026-09-23T11:05:34Z",
+      "finished": "2026-09-23T11:05:35Z",
       "failure": null,
       "steps": [
         {
@@ -170,8 +170,8 @@
               "dataset": "dataset"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:18:47Z",
-            "finished": "2026-09-22T12:18:47Z",
+            "started": "2026-09-23T11:05:34Z",
+            "finished": "2026-09-23T11:05:34Z",
             "created": [
               "plate",
               "well_A1",
@@ -205,8 +205,8 @@
               "reference": "img_A1_c0"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:18:47Z",
-            "finished": "2026-09-22T12:18:48Z",
+            "started": "2026-09-23T11:05:34Z",
+            "finished": "2026-09-23T11:05:34Z",
             "created": [
               "1_registered-j2"
             ],
@@ -236,8 +236,8 @@
               "container": "well_A1"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:18:48Z",
-            "finished": "2026-09-22T12:18:48Z",
+            "started": "2026-09-23T11:05:35Z",
+            "finished": "2026-09-23T11:05:35Z",
             "created": [
               "nuclei-j3"
             ],
@@ -267,8 +267,8 @@
               "roi_table": null
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:18:48Z",
-            "finished": "2026-09-22T12:18:48Z",
+            "started": "2026-09-23T11:05:35Z",
+            "finished": "2026-09-23T11:05:35Z",
             "created": [
               "nuclei_measurements-j4"
             ],

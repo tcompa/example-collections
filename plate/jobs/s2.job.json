@@ -90,8 +90,8 @@
       "scope": null,
       "invalidated": [],
       "status": "succeeded",
-      "started": "2026-09-22T12:17:54Z",
-      "finished": "2026-09-22T12:17:57Z",
+      "started": "2026-09-23T11:05:10Z",
+      "finished": "2026-09-23T11:05:13Z",
       "failure": null,
       "steps": [
         {
@@ -161,8 +161,8 @@
               "dataset": "dataset"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:54Z",
-            "finished": "2026-09-22T12:17:55Z",
+            "started": "2026-09-23T11:05:10Z",
+            "finished": "2026-09-23T11:05:10Z",
             "created": [
               "plate",
               "well_A1",
@@ -196,8 +196,8 @@
               "container": "well_A1"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:55Z",
-            "finished": "2026-09-22T12:17:55Z",
+            "started": "2026-09-23T11:05:10Z",
+            "finished": "2026-09-23T11:05:11Z",
             "created": [
               "0_corrected-j2"
             ],
@@ -218,8 +218,8 @@
               "container": "well_A2"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:55Z",
-            "finished": "2026-09-22T12:17:55Z",
+            "started": "2026-09-23T11:05:10Z",
+            "finished": "2026-09-23T11:05:11Z",
             "created": [
               "0_corrected-j4"
             ],
@@ -240,8 +240,8 @@
               "container": "well_A1"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:55Z",
-            "finished": "2026-09-22T12:17:55Z",
+            "started": "2026-09-23T11:05:11Z",
+            "finished": "2026-09-23T11:05:11Z",
             "created": [
               "1_corrected-j3"
             ],
@@ -262,8 +262,8 @@
               "container": "well_A2"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:55Z",
-            "finished": "2026-09-22T12:17:55Z",
+            "started": "2026-09-23T11:05:11Z",
+            "finished": "2026-09-23T11:05:11Z",
             "created": [
               "1_corrected-j5"
             ],
@@ -294,8 +294,8 @@
               "container": "well_A1"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:56Z",
-            "finished": "2026-09-22T12:17:56Z",
+            "started": "2026-09-23T11:05:11Z",
+            "finished": "2026-09-23T11:05:11Z",
             "created": [
               "nuclei_0_corrected-j6"
             ],
@@ -319,8 +319,8 @@
               "container": "well_A2"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:56Z",
-            "finished": "2026-09-22T12:17:56Z",
+            "started": "2026-09-23T11:05:11Z",
+            "finished": "2026-09-23T11:05:11Z",
             "created": [
               "nuclei_0_corrected-j8"
             ],
@@ -344,8 +344,8 @@
               "container": "well_A1"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:56Z",
-            "finished": "2026-09-22T12:17:56Z",
+            "started": "2026-09-23T11:05:11Z",
+            "finished": "2026-09-23T11:05:12Z",
             "created": [
               "nuclei_1_corrected-j7"
             ],
@@ -369,8 +369,8 @@
               "container": "well_A2"
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:56Z",
-            "finished": "2026-09-22T12:17:56Z",
+            "started": "2026-09-23T11:05:11Z",
+            "finished": "2026-09-23T11:05:12Z",
             "created": [
               "nuclei_1_corrected-j9"
             ],
@@ -402,8 +402,8 @@
               "roi_table": null
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:56Z",
-            "finished": "2026-09-22T12:17:57Z",
+            "started": "2026-09-23T11:05:12Z",
+            "finished": "2026-09-23T11:05:12Z",
             "created": [
               "measurements_0_corrected-j10"
             ],
@@ -428,36 +428,10 @@
               "roi_table": null
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:56Z",
-            "finished": "2026-09-22T12:17:57Z",
+            "started": "2026-09-23T11:05:12Z",
+            "finished": "2026-09-23T11:05:12Z",
             "created": [
               "measurements_0_corrected-j12"
-            ],
-            "kept": []
-          },
-          {
-            "job": "j13",
-            "step": "measure",
-            "primary": "1_corrected-j5",
-            "task": {
-              "package": "example-tasks",
-              "name": "measure_objects",
-              "version": "1.0.0"
-            },
-            "parameters": {
-              "table_name": "measurements_{image}"
-            },
-            "inputs": {
-              "image": "1_corrected-j5",
-              "container": "well_A2",
-              "label": "nuclei_1_corrected-j9",
-              "roi_table": null
-            },
-            "status": "succeeded",
-            "started": "2026-09-22T12:17:57Z",
-            "finished": "2026-09-22T12:17:57Z",
-            "created": [
-              "measurements_1_corrected-j13"
             ],
             "kept": []
           },
@@ -480,10 +454,36 @@
               "roi_table": null
             },
             "status": "succeeded",
-            "started": "2026-09-22T12:17:57Z",
-            "finished": "2026-09-22T12:17:57Z",
+            "started": "2026-09-23T11:05:12Z",
+            "finished": "2026-09-23T11:05:12Z",
             "created": [
               "measurements_1_corrected-j11"
+            ],
+            "kept": []
+          },
+          {
+            "job": "j13",
+            "step": "measure",
+            "primary": "1_corrected-j5",
+            "task": {
+              "package": "example-tasks",
+              "name": "measure_objects",
+              "version": "1.0.0"
+            },
+            "parameters": {
+              "table_name": "measurements_{image}"
+            },
+            "inputs": {
+              "image": "1_corrected-j5",
+              "container": "well_A2",
+              "label": "nuclei_1_corrected-j9",
+              "roi_table": null
+            },
+            "status": "succeeded",
+            "started": "2026-09-23T11:05:12Z",
+            "finished": "2026-09-23T11:05:12Z",
+            "created": [
+              "measurements_1_corrected-j13"
             ],
             "kept": []
           }

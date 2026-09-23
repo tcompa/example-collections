@@ -21,8 +21,8 @@
         "roi_table": null
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:57Z",
-      "finished": "2026-09-22T11:57:57Z",
+      "started": "2026-09-23T11:05:14Z",
+      "finished": "2026-09-23T11:05:14Z",
       "created": [
         "measurements_0_corrected-j16"
       ],
@@ -47,8 +47,8 @@
         "roi_table": null
       },
       "status": "succeeded",
-      "started": "2026-09-22T11:57:57Z",
-      "finished": "2026-09-22T11:57:58Z",
+      "started": "2026-09-23T11:05:14Z",
+      "finished": "2026-09-23T11:05:14Z",
       "created": [
         "measurements_1_corrected-j17"
       ],
